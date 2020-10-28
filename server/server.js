@@ -1,8 +1,18 @@
 const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 3000;
+
+const apiRouter = require('./routes/api');
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.use('/api', apiRouter);
 
 app.use('/', express.static(path.join(__dirname, '../client/index.js')));
 

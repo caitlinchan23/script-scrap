@@ -1,16 +1,20 @@
 /* react entry point that connects rest of react components */
 
 import React, { Component } from 'react';
+import ScriptsContainer from './components/allScriptsContainer.jsx';
+import { ScriptProvider } from './components/scriptContext.jsx'
+import AddScript from './components/addScript.jsx'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   render() {
   return (
-    <div>
-      <h1>You did it!</h1>
-    </div>
+    <ScriptProvider>
+      <div>
+        <AddScript />
+        <ScriptsContainer />
+      </div>
+    </ScriptProvider>
     );
   }
 }
