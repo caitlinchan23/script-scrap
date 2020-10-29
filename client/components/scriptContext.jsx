@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from "react";
+import React, { useState, createContext } from "react";
 
 export const ScriptContext = createContext();
 
@@ -8,7 +8,7 @@ export const ScriptProvider = (props) => {
   fetch('/api')
   .then(res => res.json())
   .then(info => {
-    setScripts(info)
+    setScripts(info);
   })
   .catch(err => console.log(err));
 

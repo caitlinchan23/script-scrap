@@ -17,6 +17,12 @@ router.post('/add',
   }
 );
 
+router.delete('/delete/:title',
+  scriptsController.deleteScript,
+  (req, res) => {
+  res.send({type: 'DELETE'});
+});
+
 
 
 module.exports = router;
