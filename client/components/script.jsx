@@ -1,4 +1,3 @@
-import { text } from 'body-parser';
 import React from 'react';
 
 
@@ -8,20 +7,20 @@ const Script = (props) => {
     let textColor;
     if (props.score >= 17) {
       score = 'Strong Consider';
-      color = 'palegreen';
-      textColor = 'mediumseagreen';
+      color = 'rgb(116,230,116)';
+      textColor = 'darkgreen';
     } else if (props.score >= 12) {
       score = 'Weak Consider';
-      color = 'aquamarine';
-      textColor = 'mediumseagreen';
+      color = 'rgb(157, 252, 193)';
+      textColor = 'rgb(9, 122, 9)';
     } else if (props.score >= 8) {
       score = 'Weak Pass';
       color = 'pink';
-      textColor = 'crimson';
+      textColor = 'rgb(184,29,56)';
     } else if (props.score <= 7) {
       score = 'Strong Pass'
-      color = 'crimson';
-      textColor = 'darkred';
+      color = 'rgb(253,89,115)';
+      textColor = 'rgb(109,9,25)';
     };
   return (
     <div className="script-detail" style={{
@@ -33,8 +32,7 @@ const Script = (props) => {
       <br></br>
       <h5>{props.feature}</h5>
       <h4 style={{color: textColor}}>{score}</h4>
-      <br></br>
-      <button className="delete-Btn" id={props.title} onClick={props.onClick}>x</button>
+      <button style={{color: textColor}} className="delete-Btn" id={props.title} onClick={props.onClick}>x</button>
     </div>
   )
 }
