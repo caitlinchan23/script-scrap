@@ -10,6 +10,8 @@ const useInput = init => {
   return [value, onChange];
 }
 
+// TODO: Fix this!!!
+
 const AddScript = () => {
   const [ title, titleOnChange ] = useInput('');
   const [ writer, writerOnChange ] = useInput('');
