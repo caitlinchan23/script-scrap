@@ -2,6 +2,8 @@ import React, { useState, createContext } from "react";
 
 export const ScriptContext = createContext();
 
+// TODO: use redux for state management
+
 export const ScriptProvider = (props) => {
   const [scripts, setScripts] = useState([]);
 

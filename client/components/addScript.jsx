@@ -58,7 +58,7 @@ const AddScript = () => {
       Characters: Excellent, good, fair, poor 
       Dialogue: Excellent, good, fair, poor
       Setting/Visual: Excellent, good, fair, poor */
-
+  // TODO: create resusable selects
   return (
     <form id="add-script" onSubmit={saveScript}>
       <input id="title-input" type="text" placeholder="  Title" value={title} onChange={titleOnChange} />

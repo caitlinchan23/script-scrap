@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const MONGO_URI = 'mongodb+srv://caitlinsolo:soloprojmongo@scripts.szzql.mongodb.net/Scripts?retryWrites=true&w=majority';
 // TODO change over to SQL database to make relation between user and scripts
+// TODO create .env to hide URI 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
