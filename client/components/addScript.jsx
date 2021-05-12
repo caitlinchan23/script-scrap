@@ -21,7 +21,18 @@ const AddScript = () => {
   const [ characters, charsOnChange ] = useInput('');
   const [ dialogue, dialOnChange ] = useInput('');
   const [ setting_visual, settingOnChange ] = useInput('');
-  // const [ score, scoreOnChange ] = useInput('');
+  const states = [story_idea, 
+    plot_structure, 
+    characters, 
+    dialogue, 
+    setting_visual ];
+
+    const statesOnChanges = [
+      storyOnChange, 
+      plotOnChange, 
+      charsOnChange, 
+      dialOnChange, 
+      settingOnChange ];
 
   const addScore = (...args) => {
     let sum = 0;
@@ -53,6 +64,16 @@ const AddScript = () => {
     .then(resp => resp.json())
   }
 
+  // const CreateSelect = props => (
+  //   <select value={props.value} onChange={props.onChange}>
+  //     <option>{props.optionTitle}</option>
+  //     <option value="4">Excellent</option>
+  //     <option value="3">Good</option>
+  //     <option value="2">Fair</option>
+  //     <option value="1">Poor</option>
+  //   </select>
+  // )
+
   /* Story Idea: Excellent, good, fair, poor 
       Plot/Structure: Execellent, good, fair, poor
       Characters: Excellent, good, fair, poor 
@@ -68,6 +89,11 @@ const AddScript = () => {
         <option value="Pilot">Pilot</option>
         <option value="Feature">Feature</option>
       </select>
+      {/* {states.map((state, i) => (
+        <CreateSelect value={state} 
+                      onChange={statesOnChanges[i]}
+                      optionTitle="hi" />
+      ))} */}
       <select value={story_idea} onChange={storyOnChange}>
         <option>Story Idea</option>
         <option value="4">Excellent</option>
